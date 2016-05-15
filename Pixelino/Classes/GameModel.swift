@@ -55,8 +55,8 @@ class GameModel : NSObject
         {
             for j in 0...self.colorMatrixSize.1 - 1
             {
-                //let randomNumber = Int(arc4random()) % Int(self.numberOfDifferentColors)
-                let randomNumber = Int(rand()) % Int(self.numberOfDifferentColors)
+                let randomNumber = Int(arc4random()) % Int(self.numberOfDifferentColors)
+                //let randomNumber = Int(rand()) % Int(self.numberOfDifferentColors)
                 self.colorMatrix[i][j] = randomNumber
             }
         }
