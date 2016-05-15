@@ -20,6 +20,7 @@ class GameViewController: UIViewController, GameModelDelegate
         super.viewDidLoad()
         
         self.title = "Pixelino"
+        self.view.backgroundColor = UIColor.darkGrayColor()
         
         self.model.delegate = self
         self.model.startNewGame()
@@ -49,11 +50,30 @@ class GameViewController: UIViewController, GameModelDelegate
             self.colorTileViews.append(innerArray)
         }
         
+        // Create the label which displays the number of steps which are left
         self.scoreLabel.frame = CGRectMake(8, yOffset + self.view.frame.size.width + 16, self.view.frame.size.width - 2 * 8, 50)
         self.scoreLabel.textAlignment = NSTextAlignment.Center
         self.scoreLabel.textColor = UIColor.whiteColor()
         self.scoreLabel.font = self.scoreLabel.font.fontWithSize(40)
         self.view.addSubview(self.scoreLabel)
+        
+        // Create the color buttons
+        let gapWidth : CGFloat = 12
+        var x : CGFloat = gapWidth
+        let buttonWidth = (self.view.frame.size.width - CGFloat(self.model.numberOfDifferentColors + 1) * gapWidth) / CGFloat(self.model.numberOfDifferentColors);
+        let y : CGFloat = self.view.bounds.size.height - gapWidth - buttonWidth;
+        for i in 0...self.model.numberOfDifferentColors - 1
+        {
+            let colorButton = UIButton()
+            colorButton.backgroundColor = self.colorForInt(i)
+            colorButton.tag = i
+            colorButton.frame = CGRectMake(x, y, buttonWidth, buttonWidth)
+            self.view.addSubview(colorButton)
+            
+            colorButton.addTarget(self, action: #selector(GameViewController.didPressColorButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
+            x = x + buttonWidth + gapWidth;
+        }
     }
     
     
@@ -86,7 +106,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     
     /// Is called when one of the color buttons is pressed
-    @IBAction func didPressColorButton(sender : UIButton)
+    func didPressColorButton(sender : UIButton)
     {
         let buttonIndex = sender.tag;
         self.model.selectColor(buttonIndex)
