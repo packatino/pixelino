@@ -80,12 +80,17 @@ class GameModel : NSObject
     
     func selectColor(newColorInt:Int)
     {
-        self.stepCounter += 1
-        
         let oldColorInt = self.colorMatrix[0][0]
+        
+        // two times the same color doesn't make sense so we assume it was not intentionally and don't count it
+        if newColorInt == oldColorInt
+        {
+            return
+        }
         
         self.floodFill(0, y: 0, oldColorInt: oldColorInt, newColorInt: newColorInt)
         
+        self.stepCounter += 1
         if (self.hasWon() == true)
         {
             self.delegate?.didWinGame()
