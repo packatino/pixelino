@@ -73,7 +73,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        self.scoreLabel.text = String(self.model.stepCounter)
+        self.scoreLabel.text = "\(self.model.stepCounter) / \(self.model.maxNumberOfSteps)"
     }
     
     
