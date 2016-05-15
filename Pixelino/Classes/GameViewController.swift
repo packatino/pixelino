@@ -13,6 +13,7 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
 {
     let model = GameModel()
     var colorTileViews = Array<Array<ColorTileView>>()
+    let scoreLabel = UILabel()
     
     override func viewDidLoad()
     {
@@ -47,6 +48,12 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
             }
             self.colorTileViews.append(innerArray)
         }
+        
+        self.scoreLabel.frame = CGRectMake(8, yOffset + self.view.frame.size.width + 16, self.view.frame.size.width - 2 * 8, 50)
+        self.scoreLabel.textAlignment = NSTextAlignment.Center
+        self.scoreLabel.textColor = UIColor.whiteColor()
+        self.scoreLabel.font = self.scoreLabel.font.fontWithSize(40)
+        self.view.addSubview(self.scoreLabel)
     }
     
     
@@ -64,10 +71,17 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
     }
     
     
+    func updateScoreLabel()
+    {
+        self.scoreLabel.text = String(self.model.stepCounter)
+    }
+    
+    
     func startNewGame()
     {
         self.model.startNewGame()
         self.updateColorTileViews()
+        self.updateScoreLabel()
     }
     
     
@@ -78,6 +92,7 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
         self.model.selectColor(buttonIndex)
         
         self.updateColorTileViews()
+        self.updateScoreLabel()
     }
     
     
