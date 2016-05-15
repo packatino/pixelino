@@ -56,6 +56,7 @@ class GameViewController: UIViewController, GameModelDelegate
         self.scoreLabel.textColor = UIColor.whiteColor()
         self.scoreLabel.font = self.scoreLabel.font.fontWithSize(40)
         self.view.addSubview(self.scoreLabel)
+        self.updateScoreLabel()
         
         // Create the color buttons
         let gapWidth : CGFloat = 12
@@ -93,7 +94,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        self.scoreLabel.text = "\(self.model.stepCounter) / \(self.model.maxNumberOfSteps)"
+        self.scoreLabel.text = "\(self.model.stepCounter) von \(self.model.maxNumberOfSteps)"
     }
     
     
