@@ -109,7 +109,16 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
     
     func didLoseGame()
     {
-        print("Game Over")
+        let alertController = UIAlertController(title: "Game Over",
+                                                message: "Leider verloren. Versuch es noch einmal!",
+                                                preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            self.startNewGame()
+        }
+        alertController.addAction(okAction)
+        
+        self.presentViewController(alertController, animated: true){}
     }
     
     

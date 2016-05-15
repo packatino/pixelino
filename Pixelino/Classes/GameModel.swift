@@ -23,6 +23,7 @@ class GameModel : NSObject
     let colorMatrixSize = (12, 12)
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
+    let maxNumberOfSteps = 14
     
     var delegate : GameModelDelegate?
     
@@ -88,6 +89,10 @@ class GameModel : NSObject
         if (self.hasWon() == true)
         {
             self.delegate?.didWinGame()
+        }
+        else if (self.stepCounter >= self.maxNumberOfSteps)
+        {
+            self.delegate?.didLoseGame()
         }
     }
     
