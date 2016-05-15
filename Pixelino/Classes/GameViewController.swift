@@ -18,8 +18,12 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
     {
         super.viewDidLoad()
         
+        self.title = "Pixelino"
+        
         self.model.delegate = self
         self.model.startNewGame()
+        
+        let yOffset : CGFloat = 80.0
         
         // Create the color tile board
         for i in 0...self.model.colorMatrixSize.0 - 1
@@ -34,7 +38,7 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
                 let color = self.colorForInt(colorInt)
                 
                 let colorTileView = ColorTileView()
-                colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, 20.0 + xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
+                colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, yOffset + xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
                 colorTileView.backgroundColor = color
                 self.view.addSubview(colorTileView)
                 
