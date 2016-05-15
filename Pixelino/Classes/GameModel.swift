@@ -28,19 +28,6 @@ class GameModel : NSObject
     var delegate : GameModelDelegate?
     
     
-//    class var sharedInstance : GameModel
-//    {
-//        struct Static
-//        {
-//            static var onceToken : dispatch_once_t = 0
-//            static var instance : GameModel? = nil
-//        }
-//        dispatch_once(&Static.onceToken) {
-//            Static.instance = GameModel()
-//        }
-//        return Static.instance!
-//    }
-    
     override init()
     {
         super.init()
