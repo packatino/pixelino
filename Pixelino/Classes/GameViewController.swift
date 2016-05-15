@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelegate
+class GameViewController: UIViewController, GameModelDelegate
 {
     let model = GameModel()
     var colorTileViews = Array<Array<ColorTileView>>()
@@ -98,12 +98,16 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
     
     func didWinGame()
     {
-        let alertView = UIAlertView();
-        alertView.addButtonWithTitle(":-)");
-        alertView.title = "Sieg";
-        alertView.message = "Du hast das Spiel in \(self.model.stepCounter) Zügen gewonnen!";
-        alertView.delegate = self
-        alertView.show();
+        let alertController = UIAlertController(title: "Sieg",
+                                                message: "Du hast das Spiel in \(self.model.stepCounter) Zügen gewonnen!",
+                                                preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: ":-)", style: .Default) { (action) in
+            self.startNewGame()
+        }
+        alertController.addAction(okAction)
+        
+        self.presentViewController(alertController, animated: true){}
     }
     
     
@@ -119,13 +123,6 @@ class GameViewController: UIViewController, GameModelDelegate, UIAlertViewDelega
         alertController.addAction(okAction)
         
         self.presentViewController(alertController, animated: true){}
-    }
-    
-    
-    // UIAlertView delegate
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int)
-    {
-        self.startNewGame()
     }
     
     
