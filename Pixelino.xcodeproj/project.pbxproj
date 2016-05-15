@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
+		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
-		E1E586C9194E46AD001CD360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C8194E46AD001CD360 /* ViewController.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
 		E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CD194E46AD001CD360 /* Images.xcassets */; };
 		E1E586DA194E46AD001CD360 /* PixelinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586D9194E46AD001CD360 /* PixelinoTests.swift */; };
+		E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586E4194E4721001CD360 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586C6194E46AD001CD360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E1E586C8194E46AD001CD360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1E586CB194E46AD001CD360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E586CD194E46AD001CD360 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1E586D3194E46AD001CD360 /* PixelinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586D8194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586D9194E46AD001CD360 /* PixelinoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelinoTests.swift; sourceTree = "<group>"; };
+		E1E586E4194E4721001CD360 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				E1E586C6194E46AD001CD360 /* AppDelegate.swift */,
-				E1E586C8194E46AD001CD360 /* ViewController.swift */,
 				E1E586CA194E46AD001CD360 /* Main.storyboard */,
+				E1E586E3194E46E5001CD360 /* Classes */,
 				E1E586CD194E46AD001CD360 /* Images.xcassets */,
 				E1E586C4194E46AD001CD360 /* Supporting Files */,
 			);
@@ -107,6 +111,16 @@
 				E1E586D8194E46AD001CD360 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1E586E3194E46E5001CD360 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1E586E4194E4721001CD360 /* GameViewController.swift */,
+				E16E589D194E531D00C468DA /* GameModel.swift */,
+				E16E589F194E562900C468DA /* ColorTileView.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +167,9 @@
 		E1E586B9194E46AC001CD360 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Robert Mißbach";
 				TargetAttributes = {
 					E1E586C0194E46AC001CD360 = {
@@ -208,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E586C9194E46AD001CD360 /* ViewController.swift in Sources */,
+				E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */,
 				E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */,
+				E16E589E194E531D00C468DA /* GameModel.swift in Sources */,
+				E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +281,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -328,7 +347,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Pixelino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-missbach.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -339,7 +360,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Pixelino/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-missbach.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -359,6 +382,7 @@
 				INFOPLIST_FILE = PixelinoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-missbach.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -375,6 +399,7 @@
 				INFOPLIST_FILE = PixelinoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robert-missbach.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -399,6 +424,7 @@
 				E1E586DF194E46AD001CD360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1E586E0194E46AD001CD360 /* Build configuration list for PBXNativeTarget "PixelinoTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +433,7 @@
 				E1E586E2194E46AD001CD360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
