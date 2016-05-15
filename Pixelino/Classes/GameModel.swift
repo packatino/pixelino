@@ -20,7 +20,7 @@ protocol GameModelDelegate
 class GameModel : NSObject
 {
     let numberOfDifferentColors = 4
-    let colorMatrixSize = (7, 7)
+    let colorMatrixSize = (12, 12)
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
     
