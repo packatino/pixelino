@@ -8,7 +8,8 @@
 
 
 // Common Words and phrases
-"of" = "of";
+"%i moves left" = "%i moves left";
+"1 move left" = "1 move left";
 
 
 // Alerts
