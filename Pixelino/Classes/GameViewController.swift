@@ -59,10 +59,12 @@ class GameViewController: UIViewController, GameModelDelegate
         self.updateScoreLabel()
         
         // Create the color buttons
-        let gapWidth : CGFloat = 12
+        var gapWidth : CGFloat = 12
         var x : CGFloat = gapWidth
-        let buttonWidth = (self.view.frame.size.width - CGFloat(self.model.numberOfDifferentColors + 1) * gapWidth) / CGFloat(self.model.numberOfDifferentColors);
+        let maxHeight : CGFloat = self.view.bounds.size.height - 2 * gapWidth - self.scoreLabel.frame.origin.y - self.scoreLabel.frame.size.height
+        let buttonWidth = min(maxHeight, (self.view.frame.size.width - CGFloat(self.model.numberOfDifferentColors + 1) * gapWidth) / CGFloat(self.model.numberOfDifferentColors))
         let y : CGFloat = self.view.bounds.size.height - gapWidth - buttonWidth;
+        gapWidth = (self.view.bounds.size.width - CGFloat(self.model.numberOfDifferentColors) * buttonWidth - 2 * gapWidth) / CGFloat(self.model.numberOfDifferentColors - 1);
         for i in 0...self.model.numberOfDifferentColors - 1
         {
             let colorButton = UIButton()
