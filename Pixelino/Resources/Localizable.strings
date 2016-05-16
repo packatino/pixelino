@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Pixelino
+
+  Created by Robert Mißbach on 16.05.16.
+  Copyright © 2016 Robert Mißbach. All rights reserved.
+*/
+
+
+// Common Words and phrases
+"of" = "of";
+
+
+// Alerts
+"ALERT_VICTORY_TITLE" = "Congratulations";
+"ALERT_VICTORY_MESSAGE" = "You won the game with %i moves!";
+"ALERT_VICTORY_BUTTON" = ":-)";
+
+"ALERT_GAME_OVER_TITLE" = "Game Over";
+"ALERT_GAME_OVER_MESSAGE" = "Try again!";
+"ALERT_GAME_OVER_BUTTON" = "OK";

@@ -94,7 +94,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        self.scoreLabel.text = "\(self.model.stepCounter) von \(self.model.maxNumberOfSteps)"
+        self.scoreLabel.text = "\(self.model.stepCounter) \(NSLocalizedString("of", comment:"")) \(self.model.maxNumberOfSteps)"
     }
     
     
@@ -119,11 +119,11 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func didWinGame()
     {
-        let alertController = UIAlertController(title: "Sieg",
-                                                message: "Du hast das Spiel in \(self.model.stepCounter) Zügen gewonnen!",
+        let alertController = UIAlertController(title: NSLocalizedString("ALERT_VICTORY_TITLE", comment: ""),
+                                                message: String(format: NSLocalizedString("ALERT_VICTORY_MESSAGE", comment: ""), self.model.stepCounter),
                                                 preferredStyle: .Alert)
         
-        let okAction = UIAlertAction(title: ":-)", style: .Default) { (action) in
+        let okAction = UIAlertAction(title: NSLocalizedString("ALERT_VICTORY_BUTTON", comment: ""), style: .Default) { (action) in
             self.startNewGame()
         }
         alertController.addAction(okAction)
@@ -134,11 +134,11 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func didLoseGame()
     {
-        let alertController = UIAlertController(title: "Game Over",
-                                                message: "Leider verloren. Versuch es noch einmal!",
+        let alertController = UIAlertController(title: NSLocalizedString("ALERT_GAME_OVER_TITLE", comment: ""),
+                                                message: NSLocalizedString("ALERT_GAME_OVER_MESSAGE", comment: ""),
                                                 preferredStyle: .Alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        let okAction = UIAlertAction(title: NSLocalizedString("ALERT_GAME_OVER_BUTTON", comment: ""), style: .Default) { (action) in
             self.startNewGame()
         }
         alertController.addAction(okAction)

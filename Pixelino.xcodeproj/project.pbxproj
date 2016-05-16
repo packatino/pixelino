@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14C46D61CE94561001500C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14C46D51CE94561001500C8 /* Localizable.strings */; };
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
 		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E14C46D51CE94561001500C8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E14C46D41CE9452F001500C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E14C46D51CE94561001500C8 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E1E586B8194E46AC001CD360 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 				E1E586C6194E46AD001CD360 /* AppDelegate.swift */,
 				E1E586CA194E46AD001CD360 /* Main.storyboard */,
 				E1E586E3194E46E5001CD360 /* Classes */,
+				E14C46D41CE9452F001500C8 /* Resources */,
 				E1E586CD194E46AD001CD360 /* Images.xcassets */,
 				E1E586C4194E46AD001CD360 /* Supporting Files */,
 			);
@@ -206,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */,
+				E14C46D61CE94561001500C8 /* Localizable.strings in Resources */,
 				E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
