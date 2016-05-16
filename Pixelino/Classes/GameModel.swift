@@ -20,10 +20,10 @@ protocol GameModelDelegate
 class GameModel : NSObject
 {
     let numberOfDifferentColors = 4
-    let colorMatrixSize = (12, 12)
+    let colorMatrixSize = (13, 13)
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
-    let maxNumberOfSteps = 14
+    var maxNumberOfSteps = 0
     
     var delegate : GameModelDelegate?
     
@@ -31,6 +31,9 @@ class GameModel : NSObject
     override init()
     {
         super.init()
+        
+        self.maxNumberOfSteps = Int(round(CGFloat(colorMatrixSize.0) * (CGFloat(numberOfDifferentColors) / 4.0)))
+        
         self.createColorMatrix()
     }
     
