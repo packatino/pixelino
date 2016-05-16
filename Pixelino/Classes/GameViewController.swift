@@ -74,6 +74,8 @@ class GameViewController: UIViewController, GameModelDelegate
             colorButton.backgroundColor = self.colorForInt(i)
             colorButton.tag = i
             colorButton.frame = CGRectMake(x, y, buttonWidth, buttonWidth)
+            colorButton.layer.borderColor = UIColor.whiteColor().CGColor
+            colorButton.layer.borderWidth = 4.0
             self.view.addSubview(colorButton)
             
             colorButton.addTarget(self, action: #selector(GameViewController.didPressColorButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
