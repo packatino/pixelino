@@ -23,11 +23,14 @@ class GameViewController: UIViewController, GameModelDelegate
         self.view.backgroundColor = UIColor.darkGrayColor()
         
         // Google Analytics Tracking
+        #if DEBUG
+        print("Would track screen view 'Game'")
+        #else
         let tracker = GAI.sharedInstance().defaultTracker
         tracker.set(kGAIScreenName, value:"Game")
         let builder = GAIDictionaryBuilder.createScreenView()
         tracker.send(builder.build() as [NSObject : AnyObject])
-        
+        #endif
         
         self.model.delegate = self
         self.model.startNewGame()
