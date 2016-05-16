@@ -6,12 +6,15 @@
 
 target 'Pixelino' do
 
-pod 'GoogleAnalytics', '3.14.0'
+    pod 'Google/Analytics'
+    #pod 'GoogleAnalytics', '3.14.0'
 
 end
 
 
 target 'PixelinoTests' do
+    
+    pod 'Google/Analytics'
 
 end
 

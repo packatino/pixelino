@@ -10,17 +10,56 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>036F0AF1A150ABE2B4276502</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CDA171094B0686C2AAF71E59</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>17B6006F933C7E63D31CF53A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-PixelinoTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>3985614F57E46C8F18AE69D1</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>9159F01AE0CFD0B668840B02</string>
 				<string>5AA63B03EAB2DF437CF5D8D2</string>
+				<string>17B6006F933C7E63D31CF53A</string>
+				<string>50E1530813D7DAC7EDCB3DF9</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>50E1530813D7DAC7EDCB3DF9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-PixelinoTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -38,6 +77,30 @@
 			<string>Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>64EAD4AA872390EC82FF022A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>84A0987DE933F1D669691DCC</key>
 		<dict>
@@ -66,6 +129,7 @@
 			<key>children</key>
 			<array>
 				<string>E7B327F18BAB481BA83E4B5F</string>
+				<string>CDA171094B0686C2AAF71E59</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -73,6 +137,36 @@
 			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D7343F0A5830A55258A428C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>9D810A2B074621BE344D9589</key>
 		<dict>
@@ -121,6 +215,19 @@
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>CDA171094B0686C2AAF71E59</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-PixelinoTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>E14C46D41CE9452F001500C8</key>
 		<dict>
@@ -192,6 +299,39 @@
 		<dict>
 			<key>fileRef</key>
 			<string>E16E589F194E562900C468DA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E1A5FAFB1CEA5967007599D5</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pixelino-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E1A5FAFC1CEA5D7E007599D5</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>GoogleService-Info.plist</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E1A5FAFD1CEA5D7E007599D5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E1A5FAFC1CEA5D7E007599D5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -319,6 +459,7 @@
 			<key>files</key>
 			<array>
 				<string>E1E586CC194E46AD001CD360</string>
+				<string>E1A5FAFD1CEA5D7E007599D5</string>
 				<string>E14C46D61CE94561001500C8</string>
 				<string>E1E586CE194E46AD001CD360</string>
 			</array>
@@ -404,7 +545,9 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>E1A5FAFC1CEA5D7E007599D5</string>
 				<string>E1E586C5194E46AD001CD360</string>
+				<string>E1A5FAFB1CEA5967007599D5</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -511,7 +654,9 @@
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array/>
+			<array>
+				<string>036F0AF1A150ABE2B4276502</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -534,9 +679,12 @@
 			<string>E1E586E0194E46AD001CD360</string>
 			<key>buildPhases</key>
 			<array>
+				<string>9D7343F0A5830A55258A428C</string>
 				<string>E1E586CF194E46AD001CD360</string>
 				<string>E1E586D0194E46AD001CD360</string>
 				<string>E1E586D1194E46AD001CD360</string>
+				<string>E9248727D4965A14C806680A</string>
+				<string>64EAD4AA872390EC82FF022A</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -719,6 +867,8 @@
 				<string>YES</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Pixelino/Pixelino-Bridging-Header.h</string>
 				<key>SWIFT_OPTIMIZATION_LEVEL</key>
 				<string>-Onone</string>
 				<key>TARGETED_DEVICE_FAMILY</key>
@@ -789,6 +939,8 @@
 				<string>NO</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>Pixelino/Pixelino-Bridging-Header.h</string>
 				<key>TARGETED_DEVICE_FAMILY</key>
 				<string>1,2</string>
 				<key>VALIDATE_PRODUCT</key>
@@ -877,6 +1029,8 @@
 		</dict>
 		<key>E1E586E1194E46AD001CD360</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>17B6006F933C7E63D31CF53A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -911,6 +1065,8 @@
 		</dict>
 		<key>E1E586E2194E46AD001CD360</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>50E1530813D7DAC7EDCB3DF9</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -985,6 +1141,30 @@
 			<string>libPods-Pixelino.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E9248727D4965A14C806680A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>ED45CDDE32C99E61AE81CF8A</key>
 		<dict>
