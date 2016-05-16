@@ -25,7 +25,10 @@ class GameViewController: UIViewController, GameModelDelegate
         self.model.delegate = self
         self.model.startNewGame()
         
-        let yOffset : CGFloat = 80.0
+        // we have to make the layout a little more compact for the iPhone 4
+        let iPhone4 = UIDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().nativeBounds.height < 1136
+        
+        let yOffset : CGFloat = 64.0 + (iPhone4 ? 0 : 16)
         
         // Create the color tile board
         for i in 0...self.model.colorMatrixSize.0 - 1
@@ -51,10 +54,10 @@ class GameViewController: UIViewController, GameModelDelegate
         }
         
         // Create the label which displays the number of steps which are left
-        self.scoreLabel.frame = CGRectMake(8, yOffset + self.view.frame.size.width + 16, self.view.frame.size.width - 2 * 8, 50)
+        self.scoreLabel.frame = CGRectMake(8, yOffset + self.view.frame.size.width + (iPhone4 ? 6 : 16), self.view.frame.size.width - 2 * 8, iPhone4 ? 27 : 50)
         self.scoreLabel.textAlignment = NSTextAlignment.Center
         self.scoreLabel.textColor = UIColor.whiteColor()
-        self.scoreLabel.font = self.scoreLabel.font.fontWithSize(40)
+        self.scoreLabel.font = self.scoreLabel.font.fontWithSize(iPhone4 ? 24 : 40)
         self.view.addSubview(self.scoreLabel)
         self.updateScoreLabel()
         
