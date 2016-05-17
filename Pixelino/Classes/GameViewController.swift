@@ -22,8 +22,9 @@ class GameViewController: UIViewController, GameModelDelegate
         self.title = "Pixelino"
         self.view.backgroundColor = UIColor.darkGrayColor()
         
+        GoogleAnalyticsTracker.trackScreenView("Game")
+        
         self.model.delegate = self
-        self.model.startNewGame()
         
         // we have to make the layout a little more compact for the iPhone 4
         let iPhone4 = UIDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().nativeBounds.height < 1136
@@ -39,12 +40,9 @@ class GameViewController: UIViewController, GameModelDelegate
                 //let tileSize : CGFloat = 20.0
                 let tileSize : CGFloat = self.view.bounds.size.width / CGFloat(self.model.colorMatrixSize.0)
                 let xOffset = (CGFloat(self.view.bounds.size.width) - CGFloat(self.model.colorMatrixSize.0) * tileSize) * 0.5
-                let colorInt = self.model.colorMatrix[i][j]
-                let color = self.colorForInt(colorInt)
                 
                 let colorTileView = ColorTileView()
                 colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, yOffset + xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
-                colorTileView.backgroundColor = color
                 self.view.addSubview(colorTileView)
                 
                 // Add the tile to the array
@@ -59,7 +57,6 @@ class GameViewController: UIViewController, GameModelDelegate
         self.scoreLabel.textColor = UIColor.whiteColor()
         self.scoreLabel.font = self.scoreLabel.font.fontWithSize(iPhone4 ? 24 : 40)
         self.view.addSubview(self.scoreLabel)
-        self.updateScoreLabel()
         
         // Create the color buttons
         var gapWidth : CGFloat = 12
@@ -82,6 +79,8 @@ class GameViewController: UIViewController, GameModelDelegate
             
             x = x + buttonWidth + gapWidth;
         }
+        
+        startNewGame()
     }
     
     
@@ -119,6 +118,11 @@ class GameViewController: UIViewController, GameModelDelegate
         self.model.startNewGame()
         self.updateColorTileViews()
         self.updateScoreLabel()
+        
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
+                                          label:"challenge", // game mode
+                                          value:nil)
     }
     
     
@@ -135,6 +139,11 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func didWinGame()
     {
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Finished.rawValue,
+                                          label:"win",
+                                          value:nil)
+        
         let alertController = UIAlertController(title: NSLocalizedString("ALERT_VICTORY_TITLE", comment: ""),
                                                 message: String(format: NSLocalizedString("ALERT_VICTORY_MESSAGE", comment: ""), self.model.stepCounter),
                                                 preferredStyle: .Alert)
@@ -150,6 +159,11 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func didLoseGame()
     {
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Finished.rawValue,
+                                          label:"lose",
+                                          value:nil)
+        
         let alertController = UIAlertController(title: NSLocalizedString("ALERT_GAME_OVER_TITLE", comment: ""),
                                                 message: NSLocalizedString("ALERT_GAME_OVER_MESSAGE", comment: ""),
                                                 preferredStyle: .Alert)

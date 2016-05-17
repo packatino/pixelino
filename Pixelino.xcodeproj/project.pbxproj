@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036F0AF1A150ABE2B4276502 /* libPods-PixelinoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA171094B0686C2AAF71E59 /* libPods-PixelinoTests.a */; };
+		84A0987DE933F1D669691DCC /* libPods-Pixelino.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B327F18BAB481BA83E4B5F /* libPods-Pixelino.a */; };
 		E14C46D61CE94561001500C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14C46D51CE94561001500C8 /* Localizable.strings */; };
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
 		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
+		E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */; };
+		E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
 		E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CD194E46AD001CD360 /* Images.xcassets */; };
@@ -28,9 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17B6006F933C7E63D31CF53A /* Pods-PixelinoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelinoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50E1530813D7DAC7EDCB3DF9 /* Pods-PixelinoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PixelinoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AA63B03EAB2DF437CF5D8D2 /* Pods-Pixelino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.release.xcconfig"; sourceTree = "<group>"; };
+		9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.debug.xcconfig"; sourceTree = "<group>"; };
+		CDA171094B0686C2AAF71E59 /* libPods-PixelinoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PixelinoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14C46D51CE94561001500C8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
+		E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsTracker.swift; sourceTree = "<group>"; };
+		E1A5FAFB1CEA5967007599D5 /* Pixelino-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pixelino-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586C6194E46AD001CD360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,7 @@
 		E1E586D8194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586D9194E46AD001CD360 /* PixelinoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelinoTests.swift; sourceTree = "<group>"; };
 		E1E586E4194E4721001CD360 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E7B327F18BAB481BA83E4B5F /* libPods-Pixelino.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pixelino.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A0987DE933F1D669691DCC /* libPods-Pixelino.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +68,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036F0AF1A150ABE2B4276502 /* libPods-PixelinoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3985614F57E46C8F18AE69D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */,
+				5AA63B03EAB2DF437CF5D8D2 /* Pods-Pixelino.release.xcconfig */,
+				17B6006F933C7E63D31CF53A /* Pods-PixelinoTests.debug.xcconfig */,
+				50E1530813D7DAC7EDCB3DF9 /* Pods-PixelinoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94C85DCB64E827C9E9617713 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7B327F18BAB481BA83E4B5F /* libPods-Pixelino.a */,
+				CDA171094B0686C2AAF71E59 /* libPods-PixelinoTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E14C46D41CE9452F001500C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +109,8 @@
 				E1E586C3194E46AC001CD360 /* Pixelino */,
 				E1E586D6194E46AD001CD360 /* PixelinoTests */,
 				E1E586C2194E46AC001CD360 /* Products */,
+				3985614F57E46C8F18AE69D1 /* Pods */,
+				94C85DCB64E827C9E9617713 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +139,9 @@
 		E1E586C4194E46AD001CD360 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */,
 				E1E586C5194E46AD001CD360 /* Info.plist */,
+				E1A5FAFB1CEA5967007599D5 /* Pixelino-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -130,6 +169,7 @@
 				E1E586E4194E4721001CD360 /* GameViewController.swift */,
 				E16E589D194E531D00C468DA /* GameModel.swift */,
 				E16E589F194E562900C468DA /* ColorTileView.swift */,
+				E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -141,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E586DD194E46AD001CD360 /* Build configuration list for PBXNativeTarget "Pixelino" */;
 			buildPhases = (
+				ED45CDDE32C99E61AE81CF8A /* Check Pods Manifest.lock */,
 				E1E586BD194E46AC001CD360 /* Sources */,
 				E1E586BE194E46AC001CD360 /* Frameworks */,
 				E1E586BF194E46AC001CD360 /* Resources */,
+				9D810A2B074621BE344D9589 /* Embed Pods Frameworks */,
+				B23B428CAF51A2E552C8A246 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E586E0194E46AD001CD360 /* Build configuration list for PBXNativeTarget "PixelinoTests" */;
 			buildPhases = (
+				9D7343F0A5830A55258A428C /* Check Pods Manifest.lock */,
 				E1E586CF194E46AD001CD360 /* Sources */,
 				E1E586D0194E46AD001CD360 /* Frameworks */,
 				E1E586D1194E46AD001CD360 /* Resources */,
+				E9248727D4965A14C806680A /* Embed Pods Frameworks */,
+				64EAD4AA872390EC82FF022A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */,
+				E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */,
 				E14C46D61CE94561001500C8 /* Localizable.strings in Resources */,
 				E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */,
 			);
@@ -231,6 +278,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64EAD4AA872390EC82FF022A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D7343F0A5830A55258A428C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D810A2B074621BE344D9589 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B23B428CAF51A2E552C8A246 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9248727D4965A14C806680A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PixelinoTests/Pods-PixelinoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED45CDDE32C99E61AE81CF8A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1E586BD194E46AC001CD360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,6 +379,7 @@
 				E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */,
 				E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */,
 				E16E589E194E531D00C468DA /* GameModel.swift in Sources */,
+				E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */,
 				E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +452,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pixelino/Pixelino-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,6 +491,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Pixelino/Pixelino-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -355,6 +499,7 @@
 		};
 		E1E586DE194E46AD001CD360 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pixelino/Info.plist;
@@ -367,6 +512,7 @@
 		};
 		E1E586DF194E46AD001CD360 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA63B03EAB2DF437CF5D8D2 /* Pods-Pixelino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pixelino/Info.plist;
@@ -379,6 +525,7 @@
 		};
 		E1E586E1194E46AD001CD360 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B6006F933C7E63D31CF53A /* Pods-PixelinoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pixelino.app/Pixelino";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -400,6 +547,7 @@
 		};
 		E1E586E2194E46AD001CD360 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E1530813D7DAC7EDCB3DF9 /* Pods-PixelinoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pixelino.app/Pixelino";
 				FRAMEWORK_SEARCH_PATHS = (
