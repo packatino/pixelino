@@ -13,6 +13,7 @@
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
 		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
 		E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */; };
+		E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */; };
 		E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
 		E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsTracker.swift; sourceTree = "<group>"; };
+		E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStartCounter.swift; sourceTree = "<group>"; };
 		E1A5FAFB1CEA5967007599D5 /* Pixelino-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pixelino-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +172,7 @@
 				E16E589D194E531D00C468DA /* GameModel.swift */,
 				E16E589F194E562900C468DA /* ColorTileView.swift */,
 				E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */,
+				E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */,
 				E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */,
 				E16E589E194E531D00C468DA /* GameModel.swift in Sources */,
+				E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */,
 				E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */,
 				E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */,
 			);
