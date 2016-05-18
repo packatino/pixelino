@@ -15,6 +15,9 @@ class GameViewController: UIViewController, GameModelDelegate
     var colorTileViews = Array<Array<ColorTileView>>()
     let scoreLabel = UILabel()
     
+    
+    // MARK: View live cycle
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -81,6 +84,47 @@ class GameViewController: UIViewController, GameModelDelegate
         }
         
         startNewGame()
+        
+        if AppStartCounter.count() == 1
+        {
+            openHelp()
+        }
+    }
+    
+    
+    // MARK: Actions and navigation
+    
+    /// Is called when one of the color buttons is pressed
+    func didPressColorButton(sender : UIButton)
+    {
+        let buttonIndex = sender.tag;
+        self.model.selectColor(buttonIndex)
+        
+        self.updateColorTileViews()
+        self.updateScoreLabel()
+    }
+    
+    
+    /// Opens a help which tells the user how to play the game
+    func openHelp()
+    {
+        //TODO: Implement this!
+        print("Displaying a help dialog is not implemented yet.")
+    }
+    
+    
+    // MARK: Other methods
+    
+    func startNewGame()
+    {
+        self.model.startNewGame()
+        self.updateColorTileViews()
+        self.updateScoreLabel()
+        
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
+                                          label:"challenge", // game mode
+            value:nil)
     }
     
     
@@ -113,29 +157,29 @@ class GameViewController: UIViewController, GameModelDelegate
     }
     
     
-    func startNewGame()
+    func colorForInt(index:Int) -> UIColor
     {
-        self.model.startNewGame()
-        self.updateColorTileViews()
-        self.updateScoreLabel()
-        
-        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
-                                          action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
-                                          label:"challenge", // game mode
-                                          value:nil)
+        switch (index)
+        {
+        case 0:
+            return UIColor(red: 0.65, green: 0.02, blue: 0.0, alpha: 1.0)
+            
+        case 1:
+            return UIColor(red: 0.15, green: 0.59, blue: 0.18, alpha: 1.0)
+            
+        case 2:
+            return UIColor(red: 0.12, green: 0.1, blue: 0.7, alpha: 1.0)
+            
+        case 3:
+            return UIColor(red: 1.0, green: 0.76, blue: 0.0, alpha: 1.0)
+            
+        default:
+            return UIColor.blackColor()
+        }
     }
     
     
-    /// Is called when one of the color buttons is pressed
-    func didPressColorButton(sender : UIButton)
-    {
-        let buttonIndex = sender.tag;
-        self.model.selectColor(buttonIndex)
-        
-        self.updateColorTileViews()
-        self.updateScoreLabel()
-    }
-    
+    // MARK: GameModelDelegate
     
     func didWinGame()
     {
@@ -174,27 +218,5 @@ class GameViewController: UIViewController, GameModelDelegate
         alertController.addAction(okAction)
         
         self.presentViewController(alertController, animated: true){}
-    }
-    
-    
-    func colorForInt(index:Int) -> UIColor
-    {
-        switch (index)
-            {
-        case 0:
-            return UIColor(red: 0.65, green: 0.02, blue: 0.0, alpha: 1.0)
-            
-        case 1:
-            return UIColor(red: 0.15, green: 0.59, blue: 0.18, alpha: 1.0)
-            
-        case 2:
-            return UIColor(red: 0.12, green: 0.1, blue: 0.7, alpha: 1.0)
-            
-        case 3:
-            return UIColor(red: 1.0, green: 0.76, blue: 0.0, alpha: 1.0)
-            
-        default:
-            return UIColor.blackColor()
-        }
     }
 }
