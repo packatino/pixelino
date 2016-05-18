@@ -108,8 +108,12 @@ class GameViewController: UIViewController, GameModelDelegate
     /// Opens a help which tells the user how to play the game
     func openHelp()
     {
-        //TODO: Implement this!
-        print("Displaying a help dialog is not implemented yet.")
+        let alertController = UIAlertController(title: NSLocalizedString("ALERT_HELP_TITLE", comment: ""),
+                                                message: String(format: NSLocalizedString("ALERT_HELP_MESSAGE", comment: ""), self.model.stepCounter),
+                                                preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: NSLocalizedString("ALERT_HELP_BUTTON", comment: ""), style: .Default) { (action) in}
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true){}
     }
     
     
@@ -191,12 +195,10 @@ class GameViewController: UIViewController, GameModelDelegate
         let alertController = UIAlertController(title: NSLocalizedString("ALERT_VICTORY_TITLE", comment: ""),
                                                 message: String(format: NSLocalizedString("ALERT_VICTORY_MESSAGE", comment: ""), self.model.stepCounter),
                                                 preferredStyle: .Alert)
-        
         let okAction = UIAlertAction(title: NSLocalizedString("ALERT_VICTORY_BUTTON", comment: ""), style: .Default) { (action) in
             self.startNewGame()
         }
         alertController.addAction(okAction)
-        
         self.presentViewController(alertController, animated: true){}
     }
     
@@ -211,12 +213,10 @@ class GameViewController: UIViewController, GameModelDelegate
         let alertController = UIAlertController(title: NSLocalizedString("ALERT_GAME_OVER_TITLE", comment: ""),
                                                 message: NSLocalizedString("ALERT_GAME_OVER_MESSAGE", comment: ""),
                                                 preferredStyle: .Alert)
-        
         let okAction = UIAlertAction(title: NSLocalizedString("ALERT_GAME_OVER_BUTTON", comment: ""), style: .Default) { (action) in
             self.startNewGame()
         }
         alertController.addAction(okAction)
-        
         self.presentViewController(alertController, animated: true){}
     }
 }

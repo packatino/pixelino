@@ -20,3 +20,7 @@
 "ALERT_GAME_OVER_TITLE" = "Game Over";
 "ALERT_GAME_OVER_MESSAGE" = "Try again!";
 "ALERT_GAME_OVER_BUTTON" = "OK";
+
+"ALERT_HELP_TITLE" = "How to play";
+"ALERT_HELP_MESSAGE" = "The goal is to capture the whole board with one single color. You start on the upper left corner. By pressing one of the four color buttons you capture all fields of that color which are next to the area which starts at the upper left corner. But choose your colors wisely because the number of moves you have to capture all fields is limited!";
+"ALERT_HELP_BUTTON" = "OK";
