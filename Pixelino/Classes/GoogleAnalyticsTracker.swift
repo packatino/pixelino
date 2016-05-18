@@ -12,6 +12,7 @@ class GoogleAnalyticsTracker: NSObject
 {
     enum TrackingCategory: String
     {
+        case App = "App"
         case Game = "Game"
     }
     

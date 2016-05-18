@@ -16,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool
     {
+        // Increment and count the number of times the app has been started
+        let appStartCounterKey = "appStartCounter"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let appStartCounter = defaults.integerForKey(appStartCounterKey) // 0 if not created yet
+        defaults.setInteger(appStartCounter + 1, forKey:appStartCounterKey)
+        print("App started (\(appStartCounter))")
+        
         GoogleAnalyticsTracker.initTracker()
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.App.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
+                                          label:appStartCounter == 0 ? "firstTime" : nil,
+                                          value:nil)
         
         return true
     }
