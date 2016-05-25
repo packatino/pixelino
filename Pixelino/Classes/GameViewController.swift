@@ -89,6 +89,12 @@ class GameViewController: UIViewController, GameModelDelegate
         {
             openHelp()
         }
+        
+        let infoButton = UIBarButtonItem(image: UIImage(named: "nav_bar_item_info"),
+                                         style: UIBarButtonItemStyle.Plain ,
+                                         target: self,
+                                         action: #selector(GameViewController.openHelp))
+        self.navigationItem.rightBarButtonItem = infoButton
     }
     
     
