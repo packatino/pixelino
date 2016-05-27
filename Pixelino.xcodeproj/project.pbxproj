@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		036F0AF1A150ABE2B4276502 /* libPods-PixelinoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA171094B0686C2AAF71E59 /* libPods-PixelinoTests.a */; };
 		84A0987DE933F1D669691DCC /* libPods-Pixelino.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B327F18BAB481BA83E4B5F /* libPods-Pixelino.a */; };
-		E14C46D61CE94561001500C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E14C46D51CE94561001500C8 /* Localizable.strings */; };
+		E127D3601CF82A4200226578 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E127D3621CF82A4200226578 /* Localizable.strings */; };
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
 		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
 		E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */; };
@@ -38,7 +38,8 @@
 		5AA63B03EAB2DF437CF5D8D2 /* Pods-Pixelino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.release.xcconfig"; sourceTree = "<group>"; };
 		9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.debug.xcconfig"; sourceTree = "<group>"; };
 		CDA171094B0686C2AAF71E59 /* libPods-PixelinoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PixelinoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E14C46D51CE94561001500C8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E127D3611CF82A4200226578 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E127D3631CF82A6500226578 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
 		E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsTracker.swift; sourceTree = "<group>"; };
@@ -100,7 +101,7 @@
 		E14C46D41CE9452F001500C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E14C46D51CE94561001500C8 /* Localizable.strings */,
+				E127D3621CF82A4200226578 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -248,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = E1E586B8194E46AC001CD360;
 			productRefGroup = E1E586C2194E46AC001CD360 /* Products */;
@@ -267,7 +269,7 @@
 			files = (
 				E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */,
 				E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */,
-				E14C46D61CE94561001500C8 /* Localizable.strings in Resources */,
+				E127D3601CF82A4200226578 /* Localizable.strings in Resources */,
 				E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +409,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E127D3621CF82A4200226578 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E127D3611CF82A4200226578 /* en */,
+				E127D3631CF82A6500226578 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E1E586CA194E46AD001CD360 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

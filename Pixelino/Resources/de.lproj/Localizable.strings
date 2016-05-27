@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Pixelino
+
+  Created by Robert Mißbach on 16.05.16.
+  Copyright © 2016 Robert Mißbach. All rights reserved.
+*/
+
+
+// Common Words and phrases
+"%i moves left" = "noch %i Züge";
+"1 move left" = "noch 1 Zug";
+
+
+// Alerts
+"ALERT_VICTORY_TITLE" = "Glückwunsch";
+"ALERT_VICTORY_MESSAGE" = "Du hast das Spiel mit %i Zügen gewonnen!";
+"ALERT_VICTORY_BUTTON" = "Neues Spiel";
+
+"ALERT_GAME_OVER_TITLE" = "Game Over";
+"ALERT_GAME_OVER_MESSAGE" = "Versuch's noch mal!";
+"ALERT_GAME_OVER_BUTTON" = "OK";
+
+"ALERT_HELP_TITLE" = "Spielanleitung";
+"ALERT_HELP_MESSAGE" = "Ziel ist es, das komplette Spielfeld mit einer Farbe zu füllen. Du beginnst immer in der linken oberen Ecke. Wenn du eines der vier großen Farbfelder unter dem Spielfeld drückst, dann eroberst du alle Felder dieser Farbe, die an den Bereich angrenzen, der in der linken oberen Ecke des Spielfeldes beginnt. Aber überlege dir deine Züge gut, denn die Anzahl der Züge, die du hast um das komplette Spielfeld zu erobern ist begrenzt!";
+"ALERT_HELP_BUTTON" = "OK";
