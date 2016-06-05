@@ -27,6 +27,21 @@ class GameModelSpec: QuickSpec
                 gameModel.colorMatrix = [firstLine, secondLine];
             }
             
+            it("should increment the step counter")
+            {
+                let stepCount = gameModel.stepCounter
+                gameModel.selectColor(3)
+                expect(gameModel.stepCounter).to(equal(stepCount + 1))
+            }
+            
+            it("should not increment the step counter if the selected color is already selected")
+            {
+                let stepCount = gameModel.stepCounter
+                gameModel.selectColor(1)
+                expect(gameModel.stepCounter).to(equal(stepCount))
+            }
+            
+            
             it("should win the game if all fields have the same color")
             {
                 gameModel.selectColor(2)
