@@ -42,9 +42,9 @@ class GameModel : NSObject
     {
         self.stepCounter = 0
         
-        for i in 0...self.colorMatrixSize.0 - 1
+        for i in 0...self.colorMatrix[0].count - 1
         {
-            for j in 0...self.colorMatrixSize.1 - 1
+            for j in 0...self.colorMatrix[1].count - 1
             {
                 let randomNumber = Int(arc4random_uniform(UInt32(self.numberOfDifferentColors)))
                 self.colorMatrix[i][j] = randomNumber
@@ -96,9 +96,9 @@ class GameModel : NSObject
     {
         let currentColor = self.colorMatrix[0][0]
         
-        for i in 0...self.colorMatrixSize.0 - 1
+        for i in 0...self.colorMatrix[0].count - 1
         {
-            for j in 0...self.colorMatrixSize.1 - 1
+            for j in 0...self.colorMatrix[1].count - 1
             {
                 if (self.colorMatrix[i][j] != currentColor)
                 {
@@ -117,7 +117,7 @@ class GameModel : NSObject
             self.colorMatrix[x][y] = newColorInt
             
             // down
-            if (y + 1 < self.colorMatrixSize.1)
+            if (y + 1 < self.colorMatrix[1].count)
             {
                 self.floodFill(x, y: y + 1, oldColorInt: oldColorInt, newColorInt: newColorInt)
             }
@@ -135,7 +135,7 @@ class GameModel : NSObject
             }
             
             // right
-            if (x + 1 < self.colorMatrixSize.0)
+            if (x + 1 < self.colorMatrix[0].count)
             {
                 self.floodFill(x + 1, y: y, oldColorInt: oldColorInt, newColorInt: newColorInt)
             }

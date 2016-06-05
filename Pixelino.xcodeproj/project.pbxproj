@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E127D3601CF82A4200226578 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E127D3621CF82A4200226578 /* Localizable.strings */; };
+		E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153CB001D04A7320038EC0C /* GameModelSpec.swift */; };
 		E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */; };
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
 		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
@@ -42,6 +43,7 @@
 		9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.debug.xcconfig"; sourceTree = "<group>"; };
 		E127D3611CF82A4200226578 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E127D3631CF82A6500226578 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E153CB001D04A7320038EC0C /* GameModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModelSpec.swift; sourceTree = "<group>"; };
 		E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStartCounterSpec.swift; sourceTree = "<group>"; };
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */,
 				E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */,
+				E153CB001D04A7320038EC0C /* GameModelSpec.swift */,
 				E1E586D7194E46AD001CD360 /* Supporting Files */,
 			);
 			path = PixelinoTests;
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */,
 				E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */,
 				E1C340EA1D04705D000BD93A /* ColorTileViewSpec.swift in Sources */,
 			);
