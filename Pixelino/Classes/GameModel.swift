@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 
 protocol GameModelDelegate
@@ -20,55 +19,21 @@ protocol GameModelDelegate
 class GameModel : NSObject
 {
     let numberOfDifferentColors = 4
-    var colorMatrix = Array<Array<Int>>()
+    let colorBoard = ValueBoard(size: 13)
     var stepCounter = 0
     var delegate : GameModelDelegate?
-    
-    
-    override init()
-    {
-        super.init()
-        self.createColorMatrixWithSizeX(13, y: 13)
-    }
     
     
     func startNewGame()
     {
         self.stepCounter = 0
-        self.fillColorMatrixWithRandomValues()
-    }
-    
-    
-    func createColorMatrixWithSizeX(x:Int, y:Int)
-    {
-        for _ in 0 ... x-1
-        {
-            var innerArray = Array<Int>()
-            for _ in 0 ... y-1
-            {
-                innerArray.append(0)
-            }
-            self.colorMatrix.append(innerArray)
-        }
-    }
-    
-    
-    func fillColorMatrixWithRandomValues()
-    {
-        for i in 0...self.colorMatrix[0].count - 1
-        {
-            for j in 0...self.colorMatrix[1].count - 1
-            {
-                let randomNumber = Int(arc4random_uniform(UInt32(self.numberOfDifferentColors)))
-                self.colorMatrix[i][j] = randomNumber
-            }
-        }
+        self.colorBoard.fillMatrixWithRandomValues(numberOfDifferentColors)
     }
     
     
     func selectColor(newColorInt:Int)
     {
-        let oldColorInt = self.colorMatrix[0][0]
+        let oldColorInt = self.colorBoard.matrix[0][0]
         
         // two times the same color doesn't make sense so we assume it was not intentionally and don't count it
         if newColorInt == oldColorInt
@@ -76,7 +41,7 @@ class GameModel : NSObject
             return
         }
         
-        self.floodFill(0, y: 0, oldColorInt: oldColorInt, newColorInt: newColorInt)
+        self.colorBoard.floodFill(0, y: 0, oldValue: oldColorInt, newValue: newColorInt)
         
         self.stepCounter += 1
         if (self.hasWon() == true)
@@ -93,60 +58,13 @@ class GameModel : NSObject
     // The maximum number of steps the user can make to fill the whole board with one color
     func maxNumberOfSteps() -> Int
     {
-        return Int(round(CGFloat(self.colorMatrix[0].count) * (CGFloat(numberOfDifferentColors) / 4.0)))
+        return Int(round(CGFloat(self.colorBoard.matrix[0].count) * (CGFloat(numberOfDifferentColors) / 4.0)))
     }
     
     
     /// Returnes YES if all tiles have the same color values
     func hasWon() -> Bool
     {
-        let currentColor = self.colorMatrix[0][0]
-        
-        for i in 0...self.colorMatrix[0].count - 1
-        {
-            for j in 0...self.colorMatrix[1].count - 1
-            {
-                if (self.colorMatrix[i][j] != currentColor)
-                {
-                    return false
-                }
-            }
-        }
-        return true;
-    }
-    
-    
-    func floodFill(x:Int, y:Int, oldColorInt:Int, newColorInt:Int)
-    {
-        if (self.colorMatrix[x][y] == oldColorInt)
-        {
-            self.colorMatrix[x][y] = newColorInt
-            
-            // down
-            if (y + 1 < self.colorMatrix[1].count)
-            {
-                self.floodFill(x, y: y + 1, oldColorInt: oldColorInt, newColorInt: newColorInt)
-            }
-            
-            // up
-            if (y > 0)
-            {
-                self.floodFill(x, y: y - 1, oldColorInt: oldColorInt, newColorInt: newColorInt)
-            }
-            
-            // left
-            if (x > 0)
-            {
-                self.floodFill(x - 1, y: y, oldColorInt: oldColorInt, newColorInt: newColorInt)
-            }
-            
-            // right
-            if (x + 1 < self.colorMatrix[0].count)
-            {
-                self.floodFill(x + 1, y: y, oldColorInt: oldColorInt, newColorInt: newColorInt)
-            }
-            
-        }
-        return;
+        return self.colorBoard.allValuesAreEqual();
     }
 }
