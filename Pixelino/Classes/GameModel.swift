@@ -20,7 +20,6 @@ protocol GameModelDelegate
 class GameModel : NSObject
 {
     let numberOfDifferentColors = 4
-    let colorMatrixSize = (13, 13)
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
     
@@ -30,7 +29,7 @@ class GameModel : NSObject
     override init()
     {
         super.init()
-        self.createColorMatrix()
+        self.createColorMatrixWithSizeX(13, y: 13)
     }
     
     
@@ -49,12 +48,12 @@ class GameModel : NSObject
     }
     
     
-    func createColorMatrix()
+    func createColorMatrixWithSizeX(x:Int, y:Int)
     {
-        for _ in 0...self.colorMatrixSize.0 - 1
+        for _ in 0 ... x-1
         {
             var innerArray = Array<Int>()
-            for _ in 0...self.colorMatrixSize.1 - 1
+            for _ in 0 ... y-1
             {
                 innerArray.append(0)
             }
@@ -90,7 +89,7 @@ class GameModel : NSObject
     // The maximum number of steps the user can make to fill the whole board with one color
     func maxNumberOfSteps() -> Int
     {
-        return Int(round(CGFloat(colorMatrixSize.0) * (CGFloat(numberOfDifferentColors) / 4.0)))
+        return Int(round(CGFloat(self.colorMatrix[0].count) * (CGFloat(numberOfDifferentColors) / 4.0)))
     }
     
     
