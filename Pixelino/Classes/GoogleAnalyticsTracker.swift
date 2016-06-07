@@ -6,8 +6,6 @@
 //  Copyright © 2016 Robert Mißbach. All rights reserved.
 //
 
-import UIKit
-
 class GoogleAnalyticsTracker: NSObject
 {
     enum TrackingCategory: String

@@ -6,10 +6,6 @@
 //  Copyright (c) 2014 Robert Mißbach. All rights reserved.
 //
 
-import Foundation
-import UIKit
-
-
 class ColorTileView : UIView
 {
     var color : UIColor
