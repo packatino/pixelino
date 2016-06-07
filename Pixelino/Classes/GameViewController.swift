@@ -35,14 +35,14 @@ class GameViewController: UIViewController, GameModelDelegate
         let yOffset : CGFloat = 64.0 + (iPhone4 ? 0 : 16)
         
         // Create the color tile board
-        for i in 0...self.model.colorMatrixSize.0 - 1
+        for i in 0...self.model.colorBoard.matrix[0].count - 1
         {
             var innerArray = Array<ColorTileView>()
-            for j in 0...self.model.colorMatrixSize.1 - 1
+            for j in 0...self.model.colorBoard.matrix[1].count - 1
             {
                 //let tileSize : CGFloat = 20.0
-                let tileSize : CGFloat = self.view.bounds.size.width / CGFloat(self.model.colorMatrixSize.0)
-                let xOffset = (CGFloat(self.view.bounds.size.width) - CGFloat(self.model.colorMatrixSize.0) * tileSize) * 0.5
+                let tileSize : CGFloat = self.view.bounds.size.width / CGFloat(self.model.colorBoard.matrix[0].count)
+                let xOffset = (CGFloat(self.view.bounds.size.width) - CGFloat(self.model.colorBoard.matrix[0].count) * tileSize) * 0.5
                 
                 let colorTileView = ColorTileView()
                 colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, yOffset + xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
@@ -141,11 +141,11 @@ class GameViewController: UIViewController, GameModelDelegate
     /// Updates the color tile views with the data from the model
     func updateColorTileViews()
     {
-        for i in 0...self.model.colorMatrixSize.0 - 1
+        for i in 0...self.model.colorBoard.matrix[0].count - 1
         {
-            for j in 0...self.model.colorMatrixSize.1 - 1
+            for j in 0...self.model.colorBoard.matrix[1].count - 1
             {
-                let colorInt = self.model.colorMatrix[i][j]
+                let colorInt = self.model.colorBoard.matrix[i][j]
                 self.colorTileViews[i][j].backgroundColor = self.colorForInt(colorInt)
             }
         }
@@ -154,7 +154,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        let movesLeft = self.model.maxNumberOfSteps - self.model.stepCounter
+        let movesLeft = self.model.maxNumberOfSteps() - self.model.stepCounter
         
         if movesLeft == 1
         {
