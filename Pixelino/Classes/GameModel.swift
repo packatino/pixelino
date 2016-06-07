@@ -22,7 +22,6 @@ class GameModel : NSObject
     let numberOfDifferentColors = 4
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
-    
     var delegate : GameModelDelegate?
     
     
@@ -36,15 +35,7 @@ class GameModel : NSObject
     func startNewGame()
     {
         self.stepCounter = 0
-        
-        for i in 0...self.colorMatrix[0].count - 1
-        {
-            for j in 0...self.colorMatrix[1].count - 1
-            {
-                let randomNumber = Int(arc4random_uniform(UInt32(self.numberOfDifferentColors)))
-                self.colorMatrix[i][j] = randomNumber
-            }
-        }
+        self.fillColorMatrixWithRandomValues()
     }
     
     
@@ -58,6 +49,19 @@ class GameModel : NSObject
                 innerArray.append(0)
             }
             self.colorMatrix.append(innerArray)
+        }
+    }
+    
+    
+    func fillColorMatrixWithRandomValues()
+    {
+        for i in 0...self.colorMatrix[0].count - 1
+        {
+            for j in 0...self.colorMatrix[1].count - 1
+            {
+                let randomNumber = Int(arc4random_uniform(UInt32(self.numberOfDifferentColors)))
+                self.colorMatrix[i][j] = randomNumber
+            }
         }
     }
     
