@@ -154,7 +154,7 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        let movesLeft = self.model.maxNumberOfSteps - self.model.stepCounter
+        let movesLeft = self.model.maxNumberOfSteps() - self.model.stepCounter
         
         if movesLeft == 1
         {

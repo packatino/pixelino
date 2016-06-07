@@ -23,7 +23,6 @@ class GameModel : NSObject
     let colorMatrixSize = (13, 13)
     var colorMatrix = Array<Array<Int>>()
     var stepCounter = 0
-    var maxNumberOfSteps = 0
     
     var delegate : GameModelDelegate?
     
@@ -31,9 +30,6 @@ class GameModel : NSObject
     override init()
     {
         super.init()
-        
-        self.maxNumberOfSteps = Int(round(CGFloat(colorMatrixSize.0) * (CGFloat(numberOfDifferentColors) / 4.0)))
-        
         self.createColorMatrix()
     }
     
@@ -84,10 +80,17 @@ class GameModel : NSObject
         {
             self.delegate?.didWinGame()
         }
-        else if (self.stepCounter >= self.maxNumberOfSteps)
+        else if (self.stepCounter >= self.maxNumberOfSteps())
         {
             self.delegate?.didLoseGame()
         }
+    }
+    
+    
+    // The maximum number of steps the user can make to fill the whole board with one color
+    func maxNumberOfSteps() -> Int
+    {
+        return Int(round(CGFloat(colorMatrixSize.0) * (CGFloat(numberOfDifferentColors) / 4.0)))
     }
     
     
