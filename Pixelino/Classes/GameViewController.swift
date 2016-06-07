@@ -9,12 +9,12 @@
 class GameViewController: UIViewController, GameModelDelegate
 {
     let model = GameModel()
-    var colorTileViews = Array<Array<ColorTileView>>()
+    var colorBoardView = ColorBoardView(frame: CGRectZero, boardSize: 1)
     let scoreLabel = UILabel()
     
     
     // MARK: View live cycle
-    
+        
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -30,26 +30,10 @@ class GameViewController: UIViewController, GameModelDelegate
         let iPhone4 = UIDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().nativeBounds.height < 1136
         
         let yOffset : CGFloat = 64.0 + (iPhone4 ? 0 : 16)
+        let colorBoardFrame = CGRect(x: 0, y: yOffset, width: self.view.bounds.size.width, height: self.view.bounds.size.width)
         
-        // Create the color tile board
-        for i in 0...self.model.colorBoard.matrix[0].count - 1
-        {
-            var innerArray = Array<ColorTileView>()
-            for j in 0...self.model.colorBoard.matrix[1].count - 1
-            {
-                //let tileSize : CGFloat = 20.0
-                let tileSize : CGFloat = self.view.bounds.size.width / CGFloat(self.model.colorBoard.matrix[0].count)
-                let xOffset = (CGFloat(self.view.bounds.size.width) - CGFloat(self.model.colorBoard.matrix[0].count) * tileSize) * 0.5
-                
-                let colorTileView = ColorTileView()
-                colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, yOffset + xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
-                self.view.addSubview(colorTileView)
-                
-                // Add the tile to the array
-                innerArray.append(colorTileView)
-            }
-            self.colorTileViews.append(innerArray)
-        }
+        self.colorBoardView = ColorBoardView(frame: colorBoardFrame, boardSize: self.model.colorBoard.matrix[0].count)
+        self.view.addSubview(self.colorBoardView)
         
         // Create the label which displays the number of steps which are left
         self.scoreLabel.frame = CGRectMake(8, yOffset + self.view.frame.size.width + (iPhone4 ? 6 : 16), self.view.frame.size.width - 2 * 8, iPhone4 ? 27 : 50)
@@ -68,7 +52,7 @@ class GameViewController: UIViewController, GameModelDelegate
         for i in 0...self.model.numberOfDifferentColors - 1
         {
             let colorButton = UIButton()
-            colorButton.backgroundColor = self.colorForInt(i)
+            colorButton.backgroundColor = self.colorBoardView.colorForInt(i)
             colorButton.tag = i
             colorButton.frame = CGRectMake(x, y, buttonWidth, buttonWidth)
             colorButton.layer.borderColor = UIColor.whiteColor().CGColor
@@ -103,7 +87,7 @@ class GameViewController: UIViewController, GameModelDelegate
         let buttonIndex = sender.tag;
         self.model.selectColor(buttonIndex)
         
-        self.updateColorTileViews()
+        self.colorBoardView.updateColorTileViewsWithMatrix(self.model.colorBoard.matrix)
         self.updateScoreLabel()
     }
     
@@ -125,27 +109,13 @@ class GameViewController: UIViewController, GameModelDelegate
     func startNewGame()
     {
         self.model.startNewGame()
-        self.updateColorTileViews()
+        self.colorBoardView.updateColorTileViewsWithMatrix(self.model.colorBoard.matrix)
         self.updateScoreLabel()
         
         GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
                                           action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
                                           label:"challenge", // game mode
             value:nil)
-    }
-    
-    
-    /// Updates the color tile views with the data from the model
-    func updateColorTileViews()
-    {
-        for i in 0...self.model.colorBoard.matrix[0].count - 1
-        {
-            for j in 0...self.model.colorBoard.matrix[1].count - 1
-            {
-                let colorInt = self.model.colorBoard.matrix[i][j]
-                self.colorTileViews[i][j].backgroundColor = self.colorForInt(colorInt)
-            }
-        }
     }
     
     
@@ -160,28 +130,6 @@ class GameViewController: UIViewController, GameModelDelegate
         else
         {
             self.scoreLabel.text = String(format: NSLocalizedString("%i moves left", comment: ""), movesLeft)
-        }
-    }
-    
-    
-    func colorForInt(index:Int) -> UIColor
-    {
-        switch (index)
-        {
-        case 0:
-            return UIColor(red: 0.65, green: 0.02, blue: 0.0, alpha: 1.0)
-            
-        case 1:
-            return UIColor(red: 0.15, green: 0.59, blue: 0.18, alpha: 1.0)
-            
-        case 2:
-            return UIColor(red: 0.12, green: 0.1, blue: 0.7, alpha: 1.0)
-            
-        case 3:
-            return UIColor(red: 1.0, green: 0.76, blue: 0.0, alpha: 1.0)
-            
-        default:
-            return UIColor.blackColor()
         }
     }
     
