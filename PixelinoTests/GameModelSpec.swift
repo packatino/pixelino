@@ -18,6 +18,19 @@ class GameModelSpec: QuickSpec
     {
         let gameModel = GameModel()
         
+        describe("Starting a new game")
+        {
+            beforeEach
+            {
+                gameModel.startNewGame()
+            }
+            
+            it("should reset the step counter")
+            {
+                expect(gameModel.stepCounter).to(equal(0))
+            }
+        }
+        
         describe("Selecting a color")
         {
             beforeEach
