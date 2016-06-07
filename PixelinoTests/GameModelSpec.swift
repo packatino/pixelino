@@ -24,7 +24,7 @@ class GameModelSpec: QuickSpec
             {
                 let firstLine: [Int] = [1, 1]
                 let secondLine: [Int] = [1, 2]
-                gameModel.colorMatrix = [firstLine, secondLine];
+                gameModel.colorBoard.matrix = [firstLine, secondLine];
             }
             
             it("should increment the step counter")
