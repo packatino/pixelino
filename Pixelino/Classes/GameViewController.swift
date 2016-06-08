@@ -26,12 +26,10 @@ class GameViewController: UIViewController, GameModelDelegate
         
         self.model.delegate = self
         
-        // we have to make the layout a little more compact for the iPhone 4
+        // Create the color board (we have to make the layout a little more compact for the iPhone 4)
         let iPhone4 = UIDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().nativeBounds.height < 1136
-        
         let yOffset : CGFloat = 64.0 + (iPhone4 ? 0 : 16)
         let colorBoardFrame = CGRect(x: 0, y: yOffset, width: self.view.bounds.size.width, height: self.view.bounds.size.width)
-        
         self.colorBoardView = ColorBoardView(frame: colorBoardFrame, boardSize: self.model.colorBoard.matrix[0].count)
         self.view.addSubview(self.colorBoardView)
         
@@ -98,6 +96,11 @@ class GameViewController: UIViewController, GameModelDelegate
         let okAction = UIAlertAction(title: NSLocalizedString("ALERT_HELP_BUTTON", comment: ""), style: .Default) { (action) in}
         alertController.addAction(okAction)
         self.presentViewController(alertController, animated: true){}
+        
+        GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Navigation.rawValue,
+                                          action:GoogleAnalyticsTracker.TrackingAction.Opened.rawValue,
+                                          label:"info",
+                                          value:nil)
     }
     
     

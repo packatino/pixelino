@@ -12,12 +12,14 @@ class GoogleAnalyticsTracker: NSObject
     {
         case App = "App"
         case Game = "Game"
+        case Navigation = "Navigation"
     }
     
     enum TrackingAction: String
     {
         case Started = "started"
         case Finished = "finished"
+        case Opened = "opened"
     }
     
     
