@@ -86,9 +86,6 @@ class GameViewController: UIViewController, GameModelDelegate
     {
         let buttonIndex = sender.tag;
         self.model.selectColor(buttonIndex)
-        
-        self.colorBoardView.updateColorTileViewsWithMatrix(self.model.colorBoard.matrix)
-        self.updateScoreLabel()
     }
     
     
@@ -109,8 +106,6 @@ class GameViewController: UIViewController, GameModelDelegate
     func startNewGame()
     {
         self.model.startNewGame()
-        self.colorBoardView.updateColorTileViewsWithMatrix(self.model.colorBoard.matrix)
-        self.updateScoreLabel()
         
         GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
                                           action:GoogleAnalyticsTracker.TrackingAction.Started.rawValue,
@@ -136,7 +131,14 @@ class GameViewController: UIViewController, GameModelDelegate
     
     // MARK: GameModelDelegate
     
-    func didWinGame()
+    func gameModelDidChangeBoard(gameModel:GameModel)
+    {
+        self.colorBoardView.updateColorTileViewsWithMatrix(gameModel.colorBoard.matrix)
+        self.updateScoreLabel()
+    }
+    
+    
+    func gameModelDidWinGame(gameModel:GameModel)
     {
         GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
                                           action:GoogleAnalyticsTracker.TrackingAction.Finished.rawValue,
@@ -144,7 +146,7 @@ class GameViewController: UIViewController, GameModelDelegate
                                           value:nil)
         
         let alertController = UIAlertController(title: NSLocalizedString("ALERT_VICTORY_TITLE", comment: ""),
-                                                message: String(format: NSLocalizedString("ALERT_VICTORY_MESSAGE", comment: ""), self.model.stepCounter),
+                                                message: String(format: NSLocalizedString("ALERT_VICTORY_MESSAGE", comment: ""), gameModel.stepCounter),
                                                 preferredStyle: .Alert)
         let okAction = UIAlertAction(title: NSLocalizedString("ALERT_VICTORY_BUTTON", comment: ""), style: .Default) { (action) in
             self.startNewGame()
@@ -154,7 +156,7 @@ class GameViewController: UIViewController, GameModelDelegate
     }
     
     
-    func didLoseGame()
+    func gameModelDidLoseGame(gameModel:GameModel)
     {
         GoogleAnalyticsTracker.trackEvent(GoogleAnalyticsTracker.TrackingCategory.Game.rawValue,
                                           action:GoogleAnalyticsTracker.TrackingAction.Finished.rawValue,

@@ -9,8 +9,9 @@
 
 protocol GameModelDelegate
 {
-    func didWinGame()
-    func didLoseGame()
+    func gameModelDidChangeBoard(gameModel:GameModel)
+    func gameModelDidWinGame(gameModel:GameModel)
+    func gameModelDidLoseGame(gameModel:GameModel)
 }
 
 
@@ -26,6 +27,7 @@ class GameModel : NSObject
     {
         self.stepCounter = 0
         self.colorBoard.fillMatrixWithRandomValues(numberOfDifferentColors)
+        self.delegate?.gameModelDidChangeBoard(self)
     }
     
     
@@ -42,13 +44,16 @@ class GameModel : NSObject
         self.colorBoard.floodFill(0, y: 0, oldValue: oldColorInt, newValue: newColorInt)
         
         self.stepCounter += 1
+        
+        self.delegate?.gameModelDidChangeBoard(self)
+        
         if (self.hasWon() == true)
         {
-            self.delegate?.didWinGame()
+            self.delegate?.gameModelDidWinGame(self)
         }
         else if (self.stepCounter >= self.maxNumberOfSteps())
         {
-            self.delegate?.didLoseGame()
+            self.delegate?.gameModelDidLoseGame(self)
         }
     }
     
