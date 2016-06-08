@@ -8,7 +8,7 @@
 
 class ColorBoardView : UIView
 {
-    var colorTileViews = Array<Array<ColorTileView>>()
+    var colorTileViews = Array<Array<UIView>>()
     
     
     init(frame: CGRect, boardSize: Int)
@@ -17,13 +17,13 @@ class ColorBoardView : UIView
         
         for i in 0...boardSize - 1
         {
-            var innerArray = Array<ColorTileView>()
+            var innerArray = Array<UIView>()
             for j in 0...boardSize - 1
             {
                 let tileSize : CGFloat = frame.size.width / CGFloat(boardSize)
                 let xOffset = (CGFloat(frame.size.width) - CGFloat(boardSize) * tileSize) * 0.5
                 
-                let colorTileView = ColorTileView()
+                let colorTileView = UIView()
                 colorTileView.frame = CGRectMake(xOffset + CGFloat(i) * tileSize, xOffset + CGFloat(j) * tileSize, tileSize, tileSize)
                 self.addSubview(colorTileView)
                 

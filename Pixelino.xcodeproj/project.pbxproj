@@ -11,14 +11,12 @@
 		E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153CB001D04A7320038EC0C /* GameModelSpec.swift */; };
 		E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */; };
 		E16E589E194E531D00C468DA /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589D194E531D00C468DA /* GameModel.swift */; };
-		E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16E589F194E562900C468DA /* ColorTileView.swift */; };
 		E1844E611D074E8700B3C322 /* ValueBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1844E601D074E8700B3C322 /* ValueBoard.swift */; };
 		E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */; };
 		E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */; };
 		E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */; };
 		E1C2B64E1D075D28002F3BAF /* ColorBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */; };
 		E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */; };
-		E1C340EA1D04705D000BD93A /* ColorTileViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
 		E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CD194E46AD001CD360 /* Images.xcassets */; };
@@ -49,7 +47,6 @@
 		E153CB001D04A7320038EC0C /* GameModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModelSpec.swift; sourceTree = "<group>"; };
 		E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStartCounterSpec.swift; sourceTree = "<group>"; };
 		E16E589D194E531D00C468DA /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		E16E589F194E562900C468DA /* ColorTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileView.swift; sourceTree = "<group>"; };
 		E1844E601D074E8700B3C322 /* ValueBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBoard.swift; sourceTree = "<group>"; };
 		E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsTracker.swift; sourceTree = "<group>"; };
 		E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStartCounter.swift; sourceTree = "<group>"; };
@@ -57,7 +54,6 @@
 		E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBoardView.swift; sourceTree = "<group>"; };
 		E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMapper.swift; sourceTree = "<group>"; };
-		E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileViewSpec.swift; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586C6194E46AD001CD360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +158,6 @@
 		E1E586D6194E46AD001CD360 /* PixelinoTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */,
 				E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */,
 				E153CB001D04A7320038EC0C /* GameModelSpec.swift */,
 				E1E586D7194E46AD001CD360 /* Supporting Files */,
@@ -185,7 +180,6 @@
 				E16E589D194E531D00C468DA /* GameModel.swift */,
 				E1844E601D074E8700B3C322 /* ValueBoard.swift */,
 				E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */,
-				E16E589F194E562900C468DA /* ColorTileView.swift */,
 				E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */,
 				E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */,
 				E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */,
@@ -404,7 +398,6 @@
 				E16E589E194E531D00C468DA /* GameModel.swift in Sources */,
 				E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */,
 				E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */,
-				E16E58A0194E562900C468DA /* ColorTileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +407,6 @@
 			files = (
 				E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */,
 				E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */,
-				E1C340EA1D04705D000BD93A /* ColorTileViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
