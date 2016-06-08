@@ -17,6 +17,7 @@
 		E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */; };
 		E1A5FAFD1CEA5D7E007599D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */; };
 		E1C2B64E1D075D28002F3BAF /* ColorBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */; };
+		E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */; };
 		E1C340EA1D04705D000BD93A /* ColorTileViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		E1A5FAFB1CEA5967007599D5 /* Pixelino-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pixelino-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1A5FAFC1CEA5D7E007599D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBoardView.swift; sourceTree = "<group>"; };
+		E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMapper.swift; sourceTree = "<group>"; };
 		E1C340E91D04705D000BD93A /* ColorTileViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTileViewSpec.swift; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				E1844E601D074E8700B3C322 /* ValueBoard.swift */,
 				E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */,
 				E16E589F194E562900C468DA /* ColorTileView.swift */,
+				E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */,
 				E1A0DA691CEB9972001CA683 /* GoogleAnalyticsTracker.swift */,
 				E1A0DA6B1CEC4347001CA683 /* AppStartCounter.swift */,
 			);
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */,
 				E1844E611D074E8700B3C322 /* ValueBoard.swift in Sources */,
 				E1C2B64E1D075D28002F3BAF /* ColorBoardView.swift in Sources */,
 				E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */,

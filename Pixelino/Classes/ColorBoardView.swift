@@ -20,7 +20,6 @@ class ColorBoardView : UIView
             var innerArray = Array<ColorTileView>()
             for j in 0...boardSize - 1
             {
-                //let tileSize : CGFloat = 20.0
                 let tileSize : CGFloat = frame.size.width / CGFloat(boardSize)
                 let xOffset = (CGFloat(frame.size.width) - CGFloat(boardSize) * tileSize) * 0.5
                 
@@ -55,30 +54,8 @@ class ColorBoardView : UIView
             for j in 0...matrix[1].count - 1
             {
                 let colorInt = matrix[i][j]
-                self.colorTileViews[i][j].backgroundColor = self.colorForInt(colorInt)
+                self.colorTileViews[i][j].backgroundColor = ColorMapper.colorForInt(colorInt)
             }
-        }
-    }
-    
-    
-    func colorForInt(index:Int) -> UIColor
-    {
-        switch (index)
-        {
-        case 0:
-            return UIColor(red: 0.65, green: 0.02, blue: 0.0, alpha: 1.0)
-            
-        case 1:
-            return UIColor(red: 0.15, green: 0.59, blue: 0.18, alpha: 1.0)
-            
-        case 2:
-            return UIColor(red: 0.12, green: 0.1, blue: 0.7, alpha: 1.0)
-            
-        case 3:
-            return UIColor(red: 1.0, green: 0.76, blue: 0.0, alpha: 1.0)
-            
-        default:
-            return UIColor.blackColor()
         }
     }
 }

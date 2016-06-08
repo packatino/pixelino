@@ -52,7 +52,7 @@ class GameViewController: UIViewController, GameModelDelegate
         for i in 0...self.model.numberOfDifferentColors - 1
         {
             let colorButton = UIButton()
-            colorButton.backgroundColor = self.colorBoardView.colorForInt(i)
+            colorButton.backgroundColor = ColorMapper.colorForInt(i)
             colorButton.tag = i
             colorButton.frame = CGRectMake(x, y, buttonWidth, buttonWidth)
             colorButton.layer.borderColor = UIColor.whiteColor().CGColor
