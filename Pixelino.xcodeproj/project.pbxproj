@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E106B0ED1D25AC3200F4B876 /* ValueBoardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106B0EC1D25AC3200F4B876 /* ValueBoardSpec.swift */; };
+		E106B0EF1D25B98500F4B876 /* ColorMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106B0EE1D25B98500F4B876 /* ColorMapperSpec.swift */; };
 		E127D3601CF82A4200226578 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E127D3621CF82A4200226578 /* Localizable.strings */; };
 		E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153CB001D04A7320038EC0C /* GameModelSpec.swift */; };
 		E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */; };
@@ -44,6 +45,7 @@
 		6930F9930E1860EAB23D90A5 /* Pods_Pixelino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pixelino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9159F01AE0CFD0B668840B02 /* Pods-Pixelino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pixelino.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pixelino/Pods-Pixelino.debug.xcconfig"; sourceTree = "<group>"; };
 		E106B0EC1D25AC3200F4B876 /* ValueBoardSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBoardSpec.swift; sourceTree = "<group>"; };
+		E106B0EE1D25B98500F4B876 /* ColorMapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMapperSpec.swift; sourceTree = "<group>"; };
 		E127D3611CF82A4200226578 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E127D3631CF82A6500226578 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E153CB001D04A7320038EC0C /* GameModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModelSpec.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */,
 				E153CB001D04A7320038EC0C /* GameModelSpec.swift */,
 				E106B0EC1D25AC3200F4B876 /* ValueBoardSpec.swift */,
+				E106B0EE1D25B98500F4B876 /* ColorMapperSpec.swift */,
 				E1E586D7194E46AD001CD360 /* Supporting Files */,
 			);
 			path = PixelinoTests;
@@ -411,6 +414,7 @@
 				E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */,
 				E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */,
 				E106B0ED1D25AC3200F4B876 /* ValueBoardSpec.swift in Sources */,
+				E106B0EF1D25B98500F4B876 /* ColorMapperSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
