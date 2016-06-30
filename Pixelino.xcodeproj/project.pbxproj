@@ -17,9 +17,9 @@
 		E1C2B64E1D075D28002F3BAF /* ColorBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */; };
 		E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */; };
 		E1D7709F1D24F0F8002DE79A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D7709E1D24F0F8002DE79A /* GoogleService-Info.plist */; };
+		E1D770A11D24F39F002DE79A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D770A01D24F39F002DE79A /* Images.xcassets */; };
 		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
-		E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CD194E46AD001CD360 /* Images.xcassets */; };
 		E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586E4194E4721001CD360 /* GameViewController.swift */; };
 		F7E0DB0D337BEF413C8F12CD /* Pods_Pixelino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6930F9930E1860EAB23D90A5 /* Pods_Pixelino.framework */; };
 		F7E2144414F98B5BE1FA4C90 /* Pods_PixelinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3F3A6D0A6B4E8C65B43575 /* Pods_PixelinoTests.framework */; };
@@ -54,11 +54,11 @@
 		E1C2B64D1D075D28002F3BAF /* ColorBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBoardView.swift; sourceTree = "<group>"; };
 		E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMapper.swift; sourceTree = "<group>"; };
 		E1D7709E1D24F0F8002DE79A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1D770A01D24F39F002DE79A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586C6194E46AD001CD360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E586CB194E46AD001CD360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E1E586CD194E46AD001CD360 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1E586D3194E46AD001CD360 /* PixelinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586D8194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E586E4194E4721001CD360 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		E14C46D41CE9452F001500C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E1D770A01D24F39F002DE79A /* Images.xcassets */,
 				E127D3621CF82A4200226578 /* Localizable.strings */,
 				E1D7709E1D24F0F8002DE79A /* GoogleService-Info.plist */,
 			);
@@ -140,7 +141,6 @@
 				E1E586CA194E46AD001CD360 /* Main.storyboard */,
 				E1E586E3194E46E5001CD360 /* Classes */,
 				E14C46D41CE9452F001500C8 /* Resources */,
-				E1E586CD194E46AD001CD360 /* Images.xcassets */,
 				E1E586C4194E46AD001CD360 /* Supporting Files */,
 			);
 			path = Pixelino;
@@ -277,9 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */,
+				E1D770A11D24F39F002DE79A /* Images.xcassets in Resources */,
 				E1D7709F1D24F0F8002DE79A /* GoogleService-Info.plist in Resources */,
 				E127D3601CF82A4200226578 /* Localizable.strings in Resources */,
-				E1E586CE194E46AD001CD360 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
