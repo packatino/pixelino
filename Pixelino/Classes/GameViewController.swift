@@ -119,15 +119,13 @@ class GameViewController: UIViewController, GameModelDelegate
     
     func updateScoreLabel()
     {
-        let movesLeft = self.model.maxNumberOfSteps() - self.model.stepCounter
-        
-        if movesLeft == 1
+        if self.model.remainingNumberOfSteps() == 1
         {
             self.scoreLabel.text = NSLocalizedString("1 move left", comment: "")
         }
         else
         {
-            self.scoreLabel.text = String(format: NSLocalizedString("%i moves left", comment: ""), movesLeft)
+            self.scoreLabel.text = String(format: NSLocalizedString("%i moves left", comment: ""), self.model.remainingNumberOfSteps())
         }
     }
     

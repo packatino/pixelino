@@ -51,7 +51,7 @@ class GameModel : NSObject
         {
             self.delegate?.gameModelDidWinGame(self)
         }
-        else if (self.stepCounter >= self.maxNumberOfSteps())
+        else if (self.remainingNumberOfSteps() <= 0)
         {
             self.delegate?.gameModelDidLoseGame(self)
         }
@@ -62,6 +62,13 @@ class GameModel : NSObject
     func maxNumberOfSteps() -> Int
     {
         return Int(round(CGFloat(self.colorBoard.matrix[0].count) * (CGFloat(numberOfDifferentColors) / 4.0)))
+    }
+    
+    
+    // Returns the remaining number of steps the user can make until the game is over
+    func remainingNumberOfSteps() -> Int
+    {
+        return self.maxNumberOfSteps() - self.stepCounter
     }
     
     

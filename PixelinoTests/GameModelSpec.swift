@@ -18,16 +18,21 @@ class GameModelSpec: QuickSpec
     {
         let gameModel = GameModel()
         
-        describe("Starting a new game")
+        describe("After starting a new game")
         {
             beforeEach
             {
                 gameModel.startNewGame()
             }
             
-            it("should reset the step counter")
+            it("the step counter should be reset")
             {
                 expect(gameModel.stepCounter).to(equal(0))
+            }
+            
+            it("the remaining number of steps should equal the maximum number of steps")
+            {
+                expect(gameModel.remainingNumberOfSteps()).to(equal(gameModel.maxNumberOfSteps()))
             }
         }
         
@@ -52,6 +57,14 @@ class GameModelSpec: QuickSpec
                 let stepCount = gameModel.stepCounter
                 gameModel.selectColor(1)
                 expect(gameModel.stepCounter).to(equal(stepCount))
+            }
+            
+            
+            it("should decrement the number remaining steps")
+            {
+                let remainingSteps = gameModel.remainingNumberOfSteps()
+                gameModel.selectColor(3)
+                expect(gameModel.remainingNumberOfSteps()).to(equal(remainingSteps - 1))
             }
             
             
