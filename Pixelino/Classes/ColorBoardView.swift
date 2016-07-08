@@ -43,6 +43,7 @@ class ColorBoardView : UIView
     
     func updateColorTileViewsWithMatrix(matrix: Array<Array<Int>>)
     {
+        // do nothing if the size of the matrix is not matching the size of the board
         if matrix.count != self.colorTileViews[0].count ||
             matrix[0].count != self.colorTileViews[1].count
         {
