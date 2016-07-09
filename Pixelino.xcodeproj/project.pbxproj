@@ -10,6 +10,7 @@
 		E106B0ED1D25AC3200F4B876 /* ValueBoardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106B0EC1D25AC3200F4B876 /* ValueBoardSpec.swift */; };
 		E106B0EF1D25B98500F4B876 /* ColorMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106B0EE1D25B98500F4B876 /* ColorMapperSpec.swift */; };
 		E106B0F11D26343B00F4B876 /* ColorBoardViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E106B0F01D26343B00F4B876 /* ColorBoardViewSpec.swift */; };
+		E10888CD1D31072A00900F29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10888CC1D31072A00900F29 /* AppDelegate.swift */; };
 		E127D3601CF82A4200226578 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E127D3621CF82A4200226578 /* Localizable.strings */; };
 		E153CB011D04A7320038EC0C /* GameModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153CB001D04A7320038EC0C /* GameModelSpec.swift */; };
 		E15F62E21D047BDB00D947E9 /* AppStartCounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F62E11D047BDB00D947E9 /* AppStartCounterSpec.swift */; };
@@ -21,7 +22,6 @@
 		E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B6511D07E4F2002F3BAF /* ColorMapper.swift */; };
 		E1D7709F1D24F0F8002DE79A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1D7709E1D24F0F8002DE79A /* GoogleService-Info.plist */; };
 		E1D770A11D24F39F002DE79A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1D770A01D24F39F002DE79A /* Images.xcassets */; };
-		E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586C6194E46AD001CD360 /* AppDelegate.swift */; };
 		E1E586CC194E46AD001CD360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E586CA194E46AD001CD360 /* Main.storyboard */; };
 		E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E586E4194E4721001CD360 /* GameViewController.swift */; };
 		F7E0DB0D337BEF413C8F12CD /* Pods_Pixelino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6930F9930E1860EAB23D90A5 /* Pods_Pixelino.framework */; };
@@ -48,6 +48,7 @@
 		E106B0EC1D25AC3200F4B876 /* ValueBoardSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBoardSpec.swift; sourceTree = "<group>"; };
 		E106B0EE1D25B98500F4B876 /* ColorMapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMapperSpec.swift; sourceTree = "<group>"; };
 		E106B0F01D26343B00F4B876 /* ColorBoardViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorBoardViewSpec.swift; sourceTree = "<group>"; };
+		E10888CC1D31072A00900F29 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E127D3611CF82A4200226578 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E127D3631CF82A6500226578 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E153CB001D04A7320038EC0C /* GameModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModelSpec.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		E1D770A01D24F39F002DE79A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1E586C1194E46AC001CD360 /* Pixelino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixelino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586C5194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1E586C6194E46AD001CD360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E586CB194E46AD001CD360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E586D3194E46AD001CD360 /* PixelinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E586D8194E46AD001CD360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 		E1E586C3194E46AC001CD360 /* Pixelino */ = {
 			isa = PBXGroup;
 			children = (
-				E1E586C6194E46AD001CD360 /* AppDelegate.swift */,
 				E1E586CA194E46AD001CD360 /* Main.storyboard */,
 				E1E586E3194E46E5001CD360 /* Classes */,
 				E14C46D41CE9452F001500C8 /* Resources */,
@@ -185,6 +184,7 @@
 		E1E586E3194E46E5001CD360 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E10888CC1D31072A00900F29 /* AppDelegate.swift */,
 				E1E586E4194E4721001CD360 /* GameViewController.swift */,
 				E16E589D194E531D00C468DA /* GameModel.swift */,
 				E1844E601D074E8700B3C322 /* ValueBoard.swift */,
@@ -399,11 +399,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10888CD1D31072A00900F29 /* AppDelegate.swift in Sources */,
 				E1C2B6521D07E4F2002F3BAF /* ColorMapper.swift in Sources */,
 				E1844E611D074E8700B3C322 /* ValueBoard.swift in Sources */,
 				E1C2B64E1D075D28002F3BAF /* ColorBoardView.swift in Sources */,
 				E1E586E5194E4721001CD360 /* GameViewController.swift in Sources */,
-				E1E586C7194E46AD001CD360 /* AppDelegate.swift in Sources */,
 				E16E589E194E531D00C468DA /* GameModel.swift in Sources */,
 				E1A0DA6C1CEC4347001CA683 /* AppStartCounter.swift in Sources */,
 				E1A0DA6A1CEB9972001CA683 /* GoogleAnalyticsTracker.swift in Sources */,
