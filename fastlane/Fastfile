@@ -23,7 +23,8 @@ platform :ios do
         scheme: "Pixelino Debug",
         configuration: "Debug",
         destination: "platform=iOS Simulator,name=iPhone 6s,OS=9.3",
-        clean: true
+        clean: true,
+        code_coverage: true
     )
   end
 
