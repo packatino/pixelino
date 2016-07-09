@@ -4,7 +4,7 @@ language: objective-c
 #	- gem install fastlane
 #    - gem install slather --no-rdoc --no-ri --no-document --quiet
 script:
-	- fastlane test
+ - fastlane test
 #  - xctool test -workspace Pixelino.xcworkspace -scheme 'Pixelino Debug' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3'
 #  - xctool test -workspace Pixelino.xcworkspace -scheme 'Pixelino Debug' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 #after_success:
