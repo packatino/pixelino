@@ -11,7 +11,7 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "1.97.2"
+fastlane_version "1.85.0"
 
 default_platform :ios
 
@@ -19,7 +19,12 @@ platform :ios do
   
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+        scheme: "Pixelino Debug",
+        configuration: "Debug",
+        destination: "platform=iOS Simulator,name=iPhone 6s,OS=9.3",
+        clean: true
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
