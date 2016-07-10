@@ -1,0 +1,5 @@
+coverage_service: coveralls
+workspace: Pixelino.xcworkspace
+xcodeproj: Pixelino.xcodeproj
+scheme: Pixelino Debug
+source_directory: Pixelino/Classes
