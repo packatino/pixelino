@@ -1,6 +1,7 @@
 # Pixelino for iOS
 
 [![Build Status](https://travis-ci.org/packatino/pixelino.svg?branch=master)](https://travis-ci.org/packatino/pixelino)
+[![Coverage Status](https://coveralls.io/repos/github/packatino/pixelino/badge.svg?branch=master)](https://coveralls.io/github/packatino/pixelino?branch=master)
 
 Pixelino is an addictive minigame. The aim is to capture all the fields on the board by changing their color. You start from the upper left corner. By pressing one of the color buttons you capture all fields of this color which are contiguous to the fields you have already captured.
 
